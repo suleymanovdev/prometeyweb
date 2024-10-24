@@ -1,0 +1,13 @@
+services:
+# ======================================== Web ========================================
+  prometey-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: web
+    ports:
+      - "80:80"
+    volumes:
+      - /usr/src/app/node_modules
+    environment:
+      - NODE_ENV=development
